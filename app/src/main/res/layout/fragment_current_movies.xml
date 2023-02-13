@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal">
+    >
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/list"
@@ -12,8 +12,9 @@
         android:layout_height="match_parent"
         android:layout_marginLeft="0dp"
         android:layout_marginRight="5dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:context=".CurrentMoviesFragment" />
+        app:layoutManager="LinearLayoutManager"
+        tools:listitem="@layout/fragment_current_movie"
+         />
 
     <androidx.core.widget.ContentLoadingProgressBar
         android:id="@+id/progress"
