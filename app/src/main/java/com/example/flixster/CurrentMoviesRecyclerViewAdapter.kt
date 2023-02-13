@@ -57,7 +57,8 @@ class CurrentMoviesRecyclerViewAdapter (
             //holder.mBookImage
             holder.mOverview.text= currentMovie.overview
             Glide.with(holder.mView)
-                .load("https://image.tmdb.org/t/p/w500"+currentMovie.posterPath)
+                .load("https://image.tmdb.org/t/p/w500"+currentMovie.posterPath).placeholder(R.drawable.loading)
+            .error(R.drawable.not_found)
                 .centerInside()
                 .into(holder.mMoviePoster)
 
